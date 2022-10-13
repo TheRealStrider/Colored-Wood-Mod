@@ -1,8 +1,13 @@
 package com.strider.cwm;
 
 import com.strider.cwm.block.ModBlocks;
+import com.strider.cwm.block.entity.ModBlockEntities;
 import com.strider.cwm.fluid.ModFluids;
 import com.strider.cwm.item.ModItems;
+import com.strider.cwm.recipe.ModRecipes;
+import com.strider.cwm.screen.ElectricSmelterScreen;
+import com.strider.cwm.screen.ModMenuTypes;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
@@ -31,6 +36,11 @@ public class ColoredWoodMod
         ModBlocks.register(eventBus);
         ModFluids.register(eventBus);
 
+        ModBlockEntities.register(eventBus);
+        ModMenuTypes.register(eventBus);
+
+        ModRecipes.register(eventBus);
+
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
         // Register the enqueueIMC method for modloading
@@ -43,6 +53,10 @@ public class ColoredWoodMod
         ItemBlockRenderTypes.setRenderLayer(ModFluids.SALTWATER_BLOCK.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModFluids.SALTWATER_FLUID.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(ModFluids.SALTWATER_FLOWING.get(), RenderType.translucent());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.ELECTRIC_SMELTER.get(), RenderType.translucent());
+
+        MenuScreens.register(ModMenuTypes.ELECTRIC_SMELTER_MENU.get(), ElectricSmelterScreen::new);
     }
 
     private void setup(final FMLCommonSetupEvent event) {

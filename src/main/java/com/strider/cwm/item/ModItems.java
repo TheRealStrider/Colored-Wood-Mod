@@ -20,6 +20,9 @@ public class ModItems {
             () -> new BucketItem(ModFluids.SALTWATER_FLUID,
                     new Item.Properties().tab(ModCreativeModeTab.COLOREDWOOD_TAB).stacksTo(1)));
 
+    public static final RegistryObject<Item> CHLORINE = ITEMS.register("chlorine",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.COLOREDWOOD_TAB)));
+
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
     }

@@ -1,0 +1,14 @@
+{
+  "type": "cwm:electric_smelting",
+  "ingredients": [
+    {
+      "item": "cwm:saltwater_bucket"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    }
+  ],
+  "output": {
+    "item": "cwm:chlorine"
+  }
+}

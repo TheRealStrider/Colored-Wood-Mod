@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "cwm:block/electric_smelter" },
+    "facing=east": { "model": "cwm:block/electric_smelter", "y": 90 },
+    "facing=south": { "model": "cwm:block/electric_smelter", "y": 180 },
+    "facing=west": { "model": "cwm:block/electric_smelter", "y": 270 }
+  }
+}

@@ -1,8 +1,10 @@
 {
   "item.cwm.salt": "Salt",
   "item.cwm.saltwater_bucket": "Saltwater Bucket",
+  "item.cwm.chlorine": "Chlorine",
 
   "block.cwm.salt_block": "Salt Block",
+  "block.cwm.electric_smelter": "Electric Smelter",
 
   "itemGroup.coloredwoodtab": "Colored Wood Mod"
 }
